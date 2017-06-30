@@ -46,6 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\DodgeThis\OuterPlaneScript.cs" />
      <Compile Include="Assets\DodgeThis\SkillsScript.cs" />
      <Compile Include="Assets\Lava_Flowing_Shader\Scripts\ScrollingUVs_Layers.cs" />
      <None Include="Assets\Wood texture floor_01\readme.txt" />
