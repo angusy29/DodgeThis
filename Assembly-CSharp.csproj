@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\DodgeThis\MonsterSpawnScript.cs" />
      <Compile Include="Assets\DodgeThis\OuterPlaneScript.cs" />
+     <Compile Include="Assets\DodgeThis\OuterWallScript.cs" />
      <Compile Include="Assets\DodgeThis\SkillsScript.cs" />
      <Compile Include="Assets\DodgeThis\ZomBunnyScript.cs" />
      <Compile Include="Assets\Lava_Flowing_Shader\Scripts\ScrollingUVs_Layers.cs" />

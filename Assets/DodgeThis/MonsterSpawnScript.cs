@@ -12,11 +12,14 @@ public class MonsterSpawnScript : MonoBehaviour {
 	 * Spawn attributes
 	 */
 	private ArrayList allMonsters;	// all monsters at this wall
-	private int max_monsters;	// max number of monsters at this wall
-	public float minWallX;
-	public float maxWallX;
-	public float minWallZ;
-	public float maxWallZ;
+	public int max_monsters;	// max number of monsters at this wall
+	public float minWallX;		// minimum X coordinate to spawn
+	public float maxWallX;		// maximum X coordinate to spawn
+	public float minWallZ;		// minimum Z coordinate to spawn
+	public float maxWallZ;		// maximum Z coordinate to spawn
+	private float spawnTimer;		// keeps track of the timer, to know when to respawn
+	private float spawnInterval;		// spawn interval, to spawn more units
+	public float MAX_SPAWN_INTERVAL;		// max spawn interval
 
 	private const float SPAWN_HEIGHT = 1.5f;
 
@@ -33,9 +36,10 @@ public class MonsterSpawnScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		allMonsters = new ArrayList ();
-		max_monsters = Random.Range (5, 15);
-	
-		for (int i = 0; i < max_monsters; i++) {
+		int num_monsters = Random.Range (1, max_monsters);
+		spawnInterval = Random.Range (5, MAX_SPAWN_INTERVAL);
+
+		for (int i = 0; i < num_monsters; i++) {
 			float spawnLocationX = Random.Range (minWallX, maxWallX);
 			float spawnLocationZ = Random.Range (minWallZ, maxWallZ);
 			Quaternion spawnRotation = Quaternion.identity;
@@ -46,14 +50,38 @@ public class MonsterSpawnScript : MonoBehaviour {
 			monster.transform.parent = gameObject.transform;
 			allMonsters.Add (monster);
 		}
+
+		spawnTimer = Time.time;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+		float elapsedTime = Time.time;
+
+		if (elapsedTime - spawnTimer >= spawnInterval) {
+			int num_monsters = Random.Range (5, max_monsters);
+			spawnInterval = Random.Range (5, MAX_SPAWN_INTERVAL);
+
+			for (int i = 0; i < num_monsters; i++) {
+				float spawnLocationX = Random.Range (minWallX, maxWallX);
+				float spawnLocationZ = Random.Range (minWallZ, maxWallZ);
+				Quaternion spawnRotation = Quaternion.identity;
+
+				spawnRotation = setSpawnRotation (spawnRotation);
+
+				GameObject monster = (GameObject) Instantiate(zombunny, new Vector3(spawnLocationX, SPAWN_HEIGHT, spawnLocationZ), spawnRotation);
+				monster.transform.parent = gameObject.transform;
+				allMonsters.Add (monster);
+			}
+
+			spawnTimer = Time.time;
+		}
 	}
 
-	Quaternion setSpawnRotation(Quaternion spawnRotation) {
+	/*
+	 * Rotate the monster so that it is facing the center
+	 */
+	private Quaternion setSpawnRotation(Quaternion spawnRotation) {
 		if (thisWallID == NORTH_WALL)
 			spawnRotation = Quaternion.Euler (new Vector3 (0.0f, 180f, 0.0f));
 
