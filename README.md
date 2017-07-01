@@ -8,14 +8,20 @@ Inspired by Dodge This Shit from Warcraft 3, when games were actually made for f
 
 ### Movement
 W - Move forward
+
 A - Rotate camera, turn player left
+
 D - Rotate camera, turn player right
+
 S - At the moment, buggy and cannot be used (known Unity bug with attaching main camera to third person character)
-Space - Jump
+
+Space - Jump (default jump is pretty useless, however).
 
 ### Skills
 Skills are activated with numeric keys.
+
 1 - Sprint, player is able to increase movement speed, cooldown 5 seconds, lasts for 1 second.
+
 2 - Leap, player leaps, increasing jump power from default 6, to 12. Buff which lasts 5 seconds, and cooldown is 5 seconds (obviously not "balanced" and will need to fix).
 
 ## Screenshots
@@ -38,5 +44,7 @@ In order of priority extensions which I may implement
 
 ## Acknowledgements
 Skill sprites - Guild Wars 1
+
 AI models -  Unity Standard Assets, Survival Shooter Tutorial.
+
 Player model - Unity Standard Assets.
