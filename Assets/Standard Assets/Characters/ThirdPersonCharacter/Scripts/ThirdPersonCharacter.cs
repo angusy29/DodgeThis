@@ -237,5 +237,9 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		public void set_m_AnimSpeedMultiplier(float mult) {
 			m_AnimSpeedMultiplier = mult;
 		}
+
+		public void set_m_jumpPower(float jump) {
+			m_JumpPower = jump;
+		}
 	}
 }

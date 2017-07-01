@@ -5,7 +5,7 @@ using UnityStandardAssets.CrossPlatformInput;
 using UnityStandardAssets.Characters.ThirdPerson;
 using UnityEngine.UI;
 
-public class SkillsScript : MonoBehaviour {
+public class SprintSkill : MonoBehaviour {
 	private ThirdPersonCharacter thePlayer;
 
 	// skills

@@ -25,6 +25,7 @@ public class ZomBunnyScript : MonoBehaviour {
 		float elapsedTime = Time.time;
 
 		if (elapsedTime - time >= delay) {
+			GetComponent<Animation> ().Play ();
 			transform.Translate(Vector3.forward * Time.deltaTime * speed, Space.Self);
 		}
 	}
