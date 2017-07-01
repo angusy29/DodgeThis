@@ -7,6 +7,8 @@ Project("{6B908111-BFEA-C7E6-4CD4-0684C9D42C05}") = "DodgeThis", "Assembly-CShar
 EndProject
 Project("{6B908111-BFEA-C7E6-4CD4-0684C9D42C05}") = "DodgeThis", "Assembly-CSharp-Editor-firstpass.csproj", "{3B914CB5-7700-2FB4-1F00-A901BF90910C}"
 EndProject
+Project("{6B908111-BFEA-C7E6-4CD4-0684C9D42C05}") = "DodgeThis", "Assembly-CSharp-Editor.csproj", "{8285A7F3-7FD1-79E0-4444-9680BD5A0240}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{3B914CB5-7700-2FB4-1F00-A901BF90910C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B914CB5-7700-2FB4-1F00-A901BF90910C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B914CB5-7700-2FB4-1F00-A901BF90910C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8285A7F3-7FD1-79E0-4444-9680BD5A0240}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8285A7F3-7FD1-79E0-4444-9680BD5A0240}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8285A7F3-7FD1-79E0-4444-9680BD5A0240}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8285A7F3-7FD1-79E0-4444-9680BD5A0240}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
