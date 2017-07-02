@@ -18,7 +18,7 @@ public class SprintSkill : MonoBehaviour {
 	private float sprint_length;	// length of time sprint skill lasts
 
 	const float NORM_SPEED = 1.0f;
-	const float SPRINT_SPEED = 2.0f;
+	const float SPRINT_SPEED = 1.5f;
 	const float SPRINT_COOLDOWN_TIME = 5.0f;
 	const float SPRINT_LENGTH_TIME = 1.0f;
 
