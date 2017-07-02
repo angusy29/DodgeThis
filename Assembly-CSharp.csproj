@@ -46,6 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\DodgeThis\ControlScript.cs" />
      <Compile Include="Assets\DodgeThis\LeapSkill.cs" />
      <Compile Include="Assets\DodgeThis\MonsterSpawnScript.cs" />
      <Compile Include="Assets\DodgeThis\OuterPlaneScript.cs" />
